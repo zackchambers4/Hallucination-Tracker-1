@@ -32,7 +32,14 @@
                             <outlet property="delegate" destination="95e-PG-aKV" id="Q09-Cc-Syu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Hallucination Tracker" id="XCf-rq-THF"/>
+                    <navigationItem key="navigationItem" title="Hallucination Tracker" id="XCf-rq-THF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="LfO-6L-trg">
+                            <color key="tintColor" red="0.9508014132" green="0.96170445370000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="95e-PG-aKV" id="oHu-VH-KhM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zA5-If-0gx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

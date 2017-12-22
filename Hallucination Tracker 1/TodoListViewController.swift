@@ -10,7 +10,7 @@ import UIKit
 
 class TodoListViewController: UITableViewController {
     
-    let itemArray = ["12/21/17", "12/23/17", "1/1/18"]
+    var itemArray = ["12/21/17", "12/23/17", "1/1/18"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,5 +43,30 @@ class TodoListViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
+    
+    //MARK - Add New Items
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add Date of Hallucination", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Date", style: .default) { (action) in
+            // What happens when the user clicks the Add Date button on screen
+            self.itemArray.append(textField.text!)
+            
+            self.tableView.reloadData()
+            
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Date of Most Recent Hallucination"
+            textField = alertTextField
+            
+        }
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
 
