@@ -10,6 +10,45 @@
     </dependencies>
     <scenes>
         <!--Hallucination Tracker-->
+        <scene sceneID="f91-80-qdj">
+            <objects>
+                <tableViewController id="VwE-jR-Nhc" customClass="CategoryViewController" customModule="Hallucination_Tracker_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5TK-YT-bsr" customClass="CategoryCell">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="aVv-eG-RgJ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aVv-eG-RgJ" id="ha7-RI-RdA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VwE-jR-Nhc" id="eWS-wB-iHG"/>
+                            <outlet property="delegate" destination="VwE-jR-Nhc" id="Goi-sR-VuS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Hallucination Tracker" id="A34-gP-r2s">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aZ8-fk-twN">
+                            <color key="tintColor" red="0.9508014132" green="0.96170445370000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="VwE-jR-Nhc" id="SjG-S1-feG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="95e-PG-aKV" kind="show" identifier="goToItems" id="Hgt-V4-Vgp"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ylc-Ki-iZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260" y="116"/>
+        </scene>
+        <!--Hallucination Tracker-->
         <scene sceneID="Huw-Eq-LIw">
             <objects>
                 <tableViewController id="95e-PG-aKV" customClass="TodoListViewController" customModule="Hallucination_Tracker_1" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,7 +90,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zA5-If-0gx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1593" y="125"/>
+            <point key="canvasLocation" x="1942" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s6J-Vd-aOX">
@@ -68,12 +107,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="95e-PG-aKV" kind="relationship" relationship="rootViewController" id="PkG-ao-Cex"/>
+                        <segue destination="VwE-jR-Nhc" kind="relationship" relationship="rootViewController" id="E2e-oH-RjU"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLy-y1-Rhc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="960" y="133.13343328335833"/>
+            <point key="canvasLocation" x="574" y="116"/>
         </scene>
     </scenes>
 </document>
