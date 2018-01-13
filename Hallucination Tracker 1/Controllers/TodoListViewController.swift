@@ -17,6 +17,8 @@ class TodoListViewController: UITableViewController {
     var selectedCategory : Category? {
         didSet{
             loadItems()
+            
+             tableView.rowHeight = 80.0
         }
     }
 
